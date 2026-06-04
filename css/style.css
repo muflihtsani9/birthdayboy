@@ -497,14 +497,16 @@ a { color:inherit; text-decoration:none; }
 .photo-frame-inner img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
   display: block;
   border-radius: 2px;
+  background: var(--deep);
   filter: brightness(.85) saturate(.85);
   transition: transform .65s var(--ease-out), filter .5s;
 }
 .photo-frame:hover .photo-frame-inner img {
-  transform: scale(1.06);
+  transform: none;
   filter: brightness(1) saturate(1.05);
 }
 
@@ -624,7 +626,8 @@ a { color:inherit; text-decoration:none; }
 .msg-slide-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
   display: block;
   filter: brightness(.8) saturate(.85);
   transition: filter .6s, transform .6s var(--ease-out);
